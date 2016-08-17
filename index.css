@@ -19,6 +19,7 @@
 	}
 }
 
+
 .bullet {
 	position: absolute;
 	/*设置一个很大的负值使其不会出现在页面上*/
@@ -26,9 +27,11 @@
 	right:-5000px;
 	/*设置这个属性好像不好使，显示还是ease*/
 	/*目前在safari中是速度表现是对的,chrome 和 firefox 依然还是ease的行为*/
-	animation-timing-function: cubic-bezier(0,0,1,1);
+	/*safari 也挂掉了，突然也变成ease了*/
+	animation-timing-function: linear;
 	-webkit-animation-timing-function: cubic-bezier(0,0,1,1);
-	animation-fill-mode: none;
+	-moz-animation-timing-function: cubic-bezier(0,0,1,1);
+	/*animation-fill-mode: none;*/
 	
 	line-height: 30px;
 	font-size: 20px;
@@ -39,4 +42,7 @@
 
 .bullet-default-animation {
 	animation: fly 8s;
+	/*如果写这个属性，safari 的 linear 就会变成ease的效果*/
+	/*-webkit-animation: fly 8s;*/
+	-moz-animation: fly 8s;
 }
