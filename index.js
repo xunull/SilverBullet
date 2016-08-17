@@ -1,9 +1,9 @@
 var animation_spans = document.querySelectorAll('.bullet_span');
-	console.log(animation_spans);
-	animation_spans.forEach(function(span) {
-		span.addEventListener('animationend', function() {
-			console.log('动画结束了');
-		})
+console.log(animation_spans);
+animation_spans.forEach(function(span) {
+	span.addEventListener('animationend', function() {
+		console.log('动画结束了');
+	})
 });
 
 var bullet_div = document.getElementById('test1');
