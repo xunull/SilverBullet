@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#test1 {
+				width:700px;
+				height:500px;
+				background-color: #819198;
+				margin: 50px auto;
+				border: 5px solid #007AFF;
+				position:relative;
+			}
+
+			@keyframes fly{
+				from{
+					right:0px;
+				}
+				to{
+					right:100%
+				}
+			}
+
+			#span1 {
+				position:absolute;
+				animation: fly 5s;
+				animation-timing-function:linear;
+				animation-fill-mode:none;
+			}
+
+			#span2 {
+				position:absolute;
+				animation: fly 5s;
+				animation-delay: 500ms;
+				animation-timing-function:linear;
+			}
+
+			#span3 {
+				position:absolute;
+				animation: fly 5s;
+				animation-delay: 1000ms;
+				animation-timing-function:linear;
+			}
+
+			#span4 {
+				position:absolute;
+				animation: fly 5s;
+				animation-delay: 1500ms;
+				animation-timing-function:linear;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='test1'>
+			<span id='span1' class='animation_span'>哈哈</span>
+			<span id='span2' class='animation_span'>666</span>
+			<span id='span3' class='animation_span'>999</span>
+			<span id='span4' class='animation_span'>这很可以</span>
+		</div>
+	</body>
+	<script>
+		  var animation_spans = document.querySelectorAll('.animation_span');
+		  console.log(animation_spans);
+		  animation_spans.forEach(function(span){
+		  	span.addEventListener('animationend',function(){
+		  		console.log('动画结束了');
+		  	})
+		  });
+
+	</script>
+</html>
