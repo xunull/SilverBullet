@@ -24,7 +24,9 @@
 	/*设置一个很大的负值使其不会出现在页面上*/
 	/*但此做法不一定最好*/
 	right:-5000px;
-	animation-timing-function: linear;
+	/*设置这个属性好像不好使，显示还是ease*/
+	animation-timing-function: cubic-bezier(0,0,1,1);
+	-webkit-animation-timing-function: cubic-bezier(0,0,1,1);
 	animation-fill-mode: none;
 	
 	line-height: 30px;

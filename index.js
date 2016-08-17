@@ -1,10 +1,20 @@
-var animation_spans = document.querySelectorAll('.bullet_span');
-console.log(animation_spans);
-animation_spans.forEach(function(span) {
-	span.addEventListener('animationend', function() {
-		console.log('动画结束了');
-	})
-});
+
+(function() {
+	var animation_spans = document.querySelectorAll('.bullet_span');
+	console.log(animation_spans);
+	// 这个方法当animation_spans 是空的时候,(firefox,safari)forEach会提示错误
+//	animation_spans.forEach(function(span) {
+//		span.addEventListener('animationend', function() {
+//			console.log('动画结束了');
+//		})
+//	});
+	// 这个方法不会提示错误
+	for(var i=0;i<animation_spans.length;i++){
+		animation_spans[i].addEventListener('animationend',function(){
+			console.log('动画结束了');
+		});
+	}
+})();
 
 var bullet_div = document.getElementById('test1');
 bullet_div.addEventListener('animationend',function(event){
