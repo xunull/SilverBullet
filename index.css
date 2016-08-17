@@ -34,22 +34,3 @@
 .bullet-default-animation {
 	animation: fly 8s;
 }
-
-#span1 {
-	animation: fly 5s;
-}
-
-#span2 {
-	animation: fly 5s;
-	animation-delay: 500ms;
-}
-
-#span3 {
-	animation: fly 5s;
-	animation-delay: 1000ms;
-}
-
-#span4 {
-	animation: fly 5s;
-	animation-delay: 1500ms;
-}

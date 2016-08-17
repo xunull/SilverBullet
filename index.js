@@ -6,6 +6,13 @@ var animation_spans = document.querySelectorAll('.bullet_span');
 		})
 });
 
+var bullet_div = document.getElementById('test1');
+bullet_div.addEventListener('animationend',function(event){
+//	console.log('动画结束了，未捕获');
+//	console.log(event.target);
+	event.target.remove();
+});
+
 var zimus=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
 function genereateBullet() {
@@ -19,7 +26,7 @@ function genereateBullet() {
 		bulletText+=zimus[randomNum];
 		bullet.id=bulletText;
 	}
-	var randomTop=Math.ceil(Math.random()*10);
+	var randomTop=Math.ceil(Math.random()*15);
 	bullet.style.top=30*randomTop+'px';
 	
 	var bulletTextNode = document.createTextNode(bulletText);
@@ -31,4 +38,4 @@ function genereateBullet() {
 //函数带() 是不同的
 //setInterval(genereateBullet(),1000);
 
-setInterval(genereateBullet,700);
+setInterval(genereateBullet,400);
