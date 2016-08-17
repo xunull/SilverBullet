@@ -25,6 +25,7 @@
 	/*但此做法不一定最好*/
 	right:-5000px;
 	/*设置这个属性好像不好使，显示还是ease*/
+	/*目前在safari中是速度表现是对的,chrome 和 firefox 依然还是ease的行为*/
 	animation-timing-function: cubic-bezier(0,0,1,1);
 	-webkit-animation-timing-function: cubic-bezier(0,0,1,1);
 	animation-fill-mode: none;
