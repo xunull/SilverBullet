@@ -1,0 +1,55 @@
+#test1 {
+	width: 700px;
+	height: 500px;
+	background-color: #819198;
+	margin: 50px auto;
+	border: 5px solid #007AFF;
+	position: relative;
+}
+
+@keyframes fly {
+	from {
+		right: -5px;
+	}
+	to {
+		right: 100%
+	}
+}
+
+.bullet {
+	position: absolute;
+	/*设置一个很大的负值使其不会出现在页面上*/
+	/*但此做法不一定最好*/
+	right:-5000px;
+	animation-timing-function: linear;
+	animation-fill-mode: none;
+	
+	line-height: 30px;
+	font-size: 20px;
+	height:30px;
+	display: inline-block;
+	border:1px solid #007AFF;
+}
+
+.bullet-default-animation {
+	animation: fly 8s;
+}
+
+#span1 {
+	animation: fly 5s;
+}
+
+#span2 {
+	animation: fly 5s;
+	animation-delay: 500ms;
+}
+
+#span3 {
+	animation: fly 5s;
+	animation-delay: 1000ms;
+}
+
+#span4 {
+	animation: fly 5s;
+	animation-delay: 1500ms;
+}
