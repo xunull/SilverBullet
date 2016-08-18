@@ -33,6 +33,7 @@ function BulletComment(word) {
 	this.color=null;
 	this.word=word;
 	
+	
 }
 
 // 弹幕文字的数组
@@ -59,18 +60,15 @@ function genereateBullet(bulletComment) {
 setInterval(temp,400);
 
 function temp() {
-	var bulletText='';
-	for(var i=0;i<5;i++){
-		var randomNum =Math.floor(Math.random()*26);
-		bulletText+=zimus[randomNum];
-//		bullet.id=bulletText;
-	}
+	var length = someWords.length;
+	var bulletText=someWords[Math.floor(Math.random()*(length))];
+
 	var bulletComment = new BulletComment(bulletText);
 	addBullet(bulletComment);
 }
 
 /**
- * 调用该方法即可生成一个弹幕
+ * 调用该方法即可生成一个弹幕，参数为弹幕的对象
  */
 function addBullet(...bulletComments) {
 	bulletComments.push(bulletComments);
