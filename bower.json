@@ -1,0 +1,21 @@
+{
+  "name": "SilverBullet",
+  "main": "index.js",
+  "homepage": "https://github.com/xunull/SilverBullet",
+  "description": "",
+  "authors": [
+    "xunull"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}

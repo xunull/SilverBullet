@@ -40,7 +40,7 @@
 	font-size: 20px;
 	height:30px;
 	display: block;
-	
+	/*此属性会防止其到达终点时挤压成多行*/
 	white-space: nowrap;
 	border:1px solid #007AFF;
 }
